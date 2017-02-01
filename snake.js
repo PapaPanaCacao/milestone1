@@ -40,7 +40,7 @@ function genBodyList(x, y, direction)//start at some coords and do not hard code
 }
 
 //generates function addBody which adds body to bodyList
-function giveAddBody(snake)//add in oppo direction of last body. 
+function giveAddBody(snake)//add in oppo direction of last body.
 							//edge case what happens when
 							//growth happens and hits a solid object
 							//it would be use alt and make turning point
@@ -55,7 +55,7 @@ function giveAddBody(snake)//add in oppo direction of last body.
 		x = lastBody.x;
 		y = lastBody.y;
 		//var xy = changeXYAddBody(x,y,snake.direction);
-		
+
 		//maybe refactor to use v2
 		var xy = addHelper(x, y, snake.direction, objList);
 		//body = new Body(xy[0], xy[1]);
@@ -66,7 +66,7 @@ function giveAddBody(snake)//add in oppo direction of last body.
 	return func;
 }
 
-//generates function move which progresses all bodies 
+//generates function move which progresses all bodies
 //in bodyList
 function giveMove(snake)
 {
@@ -74,7 +74,7 @@ function giveMove(snake)
 	{
 		var head = snake.body[0];
 		//maybe refactor to use v2
-		//var xy = giveCoord(head.x, head.y, snake.direction, 
+		//var xy = giveCoord(head.x, head.y, snake.direction,
 		//				   [(x,y)=>{return x+y}, (x,y)=>{return x-y}]);
 		//var xy //giveV2(snake.direction);
 		for(var i = snake.body.length-1; i != 0; i--)
@@ -103,3 +103,6 @@ function giveChangeDirection(snake)
 	}
 	return func;
 }
+
+// get head
+// is tile in body (vector)
