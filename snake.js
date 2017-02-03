@@ -11,6 +11,9 @@ function Snake(x, y, direction, ID)
 	this.move = giveMove(this);
 	this.getBody = ()=>{return this.body};
 	this.getID = ()=>{return this.ID};
+	this.getHead = ()=>{
+		return new Vector(1 + this.ID, 1 + this.ID);
+	}
 };
 
 //initializes bodyList
